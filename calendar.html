@@ -57,27 +57,61 @@ TopNavBar
 <div class="p-8 max-w-[1600px] mx-auto space-y-8">
 <!-- Management Controls -->
 <div class="flex flex-wrap items-center justify-between gap-4">
-<div class="flex items-center gap-3">
-<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-high border border-outline-variant rounded-xl text-on-surface hover:bg-surface-bright transition-all">
-<span class="material-symbols-outlined">upload_file</span>
-<span class="font-label-uppercase text-xs">Import CSV</span>
-</button>
-<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-high border border-outline-variant rounded-xl text-on-surface hover:bg-surface-bright transition-all">
-<span class="material-symbols-outlined">download</span>
-<span class="font-label-uppercase text-xs">Export CSV</span>
-</button>
-</div>
-<div class="flex items-center gap-4">
-<div class="flex items-center gap-2 bg-surface-container-low p-1 rounded-xl border border-outline-variant">
-<button class="p-2 bg-surface-bright rounded-lg text-primary"><span class="material-symbols-outlined">calendar_view_month</span></button>
-<button class="p-2 text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined">list</span></button>
-</div>
-<div class="flex items-center gap-4 text-on-surface font-title-md text-body-lg">
-<button class="material-symbols-outlined">chevron_left</button>
-<span class="font-bold">October 2023</span>
-<button class="material-symbols-outlined">chevron_right</button>
-</div>
-</div>
+
+    <div class="flex items-center gap-3">
+
+        <input type="file" id="csvFile" accept=".csv" hidden>
+
+        <button id="importBtn"
+            class="flex items-center gap-2 px-4 py-2 bg-surface-container-high border border-outline-variant rounded-xl text-on-surface hover:bg-surface-bright transition-all">
+            <span class="material-symbols-outlined">upload_file</span>
+            <span class="font-label-uppercase text-xs">Import CSV</span>
+        </button>
+
+        <button id="exportBtn"
+            class="flex items-center gap-2 px-4 py-2 bg-surface-container-high border border-outline-variant rounded-xl text-on-surface hover:bg-surface-bright transition-all">
+            <span class="material-symbols-outlined">download</span>
+            <span class="font-label-uppercase text-xs">Export CSV</span>
+        </button>
+
+    </div>
+
+    <div class="flex items-center gap-4">
+
+        <div class="flex items-center gap-2 bg-surface-container-low p-1 rounded-xl border border-outline-variant">
+
+            <button id="monthViewBtn"
+                class="p-2 bg-surface-bright rounded-lg text-primary">
+                <span class="material-symbols-outlined">calendar_view_month</span>
+            </button>
+
+            <button id="listViewBtn"
+                class="p-2 text-on-surface-variant hover:text-on-surface">
+                <span class="material-symbols-outlined">list</span>
+            </button>
+
+        </div>
+
+        <div class="flex items-center gap-4 text-on-surface font-title-md text-body-lg">
+
+            <button id="prevMonth"
+                class="material-symbols-outlined hover:text-primary">
+                chevron_left
+            </button>
+
+            <span id="currentMonth" class="font-bold">
+                October 2023
+            </span>
+
+            <button id="nextMonth"
+                class="material-symbols-outlined hover:text-primary">
+                chevron_right
+            </button>
+
+        </div>
+
+    </div>
+
 </div>
 <!-- Dashboard Grid -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -155,27 +189,27 @@ TopNavBar
 <span class="text-xs font-bold">14</span>
 </div>
 <!-- Filler for the rest of the month -->
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">15</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">16</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">17</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">18</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">19</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">20</span></div>
-<div class="p-3 border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">21</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">22</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">23</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">24</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">25</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">26</span></div>
-<div class="p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">27</span></div>
-<div class="p-3 border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">28</span></div>
-<div class="p-3 border-r border-outline-variant bg-surface-container-low/50"><span class="text-xs">29</span></div>
-<div class="p-3 border-r border-outline-variant bg-surface-container-low/50"><span class="text-xs">30</span></div>
-<div class="p-3 border-r border-outline-variant bg-surface-container-low/50"><span class="text-xs">31</span></div>
-<div class="p-3 border-r border-outline-variant text-on-surface-variant opacity-30">1</div>
-<div class="p-3 border-r border-outline-variant text-on-surface-variant opacity-30">2</div>
-<div class="p-3 border-r border-outline-variant text-on-surface-variant opacity-30">3</div>
-<div class="p-3 border-outline-variant text-on-surface-variant opacity-30">4</div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">15</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">16</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">17</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">18</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">19</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">20</span></div>
+<div class="calendar-day p-3 border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">21</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">22</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">23</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">24</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">25</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">26</span></div>
+<div class="calendar-day p-3 border-r border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">27</span></div>
+<div class="calendar-day p-3 border-b border-outline-variant bg-surface-container-low/50"><span class="text-xs">28</span></div>
+<div class="calendar-day p-3 border-r border-outline-variant bg-surface-container-low/50"><span class="text-xs">29</span></div>
+<div class="calendar-day p-3 border-r border-outline-variant bg-surface-container-low/50"><span class="text-xs">30</span></div>
+<div class="calendar-day p-3 border-r border-outline-variant bg-surface-container-low/50"><span class="text-xs">31</span></div>
+<div class="calendar-day p-3 border-r border-outline-variant text-on-surface-variant opacity-30">1</div>
+<div class="calendar-day p-3 border-r border-outline-variant text-on-surface-variant opacity-30">2</div>
+<div class="calendar-day p-3 border-r border-outline-variant text-on-surface-variant opacity-30">3</div>
+<div class="calendar-day p-3 border-outline-variant text-on-surface-variant opacity-30">4</div>
 </div>
 </div>
 <!-- Right Side Panel: Stats & Quick Actions -->
@@ -237,10 +271,11 @@ TopNavBar
 <input class="w-full bg-background border border-outline-variant rounded-lg px-3 py-2 text-sm" placeholder="2" type="number"/>
 </div>
 </div>
-<button class="w-full bg-secondary text-on-secondary font-bold py-3 rounded-xl shadow-lg hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-2">
-<span class="material-symbols-outlined">add_circle</span>
-                                LOG NEW TRADE
-                            </button>
+<button id="logTradeBtn"
+class="w-full bg-secondary text-on-secondary font-bold py-3 rounded-xl shadow-lg hover:opacity-90 active:scale-95 transition-all flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined">add_circle</span>
+    LOG NEW TRADE
+</button>
 </div>
 </div>
 </div>
@@ -344,25 +379,212 @@ TopNavBar
 </main>
 <nav class="fixed bottom-0 left-0 right-0 bg-surface-container border-t border-outline-variant h-16 md:hidden flex items-center justify-around px-4 z-50 shadow-[0_-4px_10px_rgba(0,0,0,0.3)]"><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary" href="dashboard.html"><span class="material-symbols-outlined">dashboard</span><span class="text-[10px] font-label-uppercase mt-1">Dashboard</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary" href="trades.html"><span class="material-symbols-outlined">receipt_long</span><span class="text-[10px] font-label-uppercase mt-1">Trades</span></a><a class="flex flex-col items-center justify-center text-primary font-bold" href="calendar.html"><span class="material-symbols-outlined">calendar_month</span><span class="text-[10px] font-label-uppercase mt-1">Calendar</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary" href="analytics.html"><span class="material-symbols-outlined">analytics</span><span class="text-[10px] font-label-uppercase mt-1">Analytics</span></a><a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary" href="settings.html"><span class="material-symbols-outlined">account_circle</span><span class="text-[10px] font-label-uppercase mt-1">Profile</span></a></nav>
 <script>
-        // Micro-interactions for calendar cells
-        document.querySelectorAll('.calendar-day').forEach(day => {
-            day.addEventListener('click', () => {
-                // Potential popup logic for specific day details
-                console.log('Day clicked');
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    let currentDate = new Date();
+
+    const monthDisplay =
+        document.getElementById("currentMonth");
+
+    function updateMonthDisplay() {
+        monthDisplay.textContent =
+            currentDate.toLocaleString("default", {
+                month: "long",
+                year: "numeric"
+            });
+    }
+
+    if (monthDisplay) {
+        updateMonthDisplay();
+    }
+
+    // PREVIOUS MONTH
+
+    document.getElementById("prevMonth")
+    ?.addEventListener("click", () => {
+
+        currentDate.setMonth(
+            currentDate.getMonth() - 1
+        );
+
+        updateMonthDisplay();
+    });
+
+    // NEXT MONTH
+
+    document.getElementById("nextMonth")
+    ?.addEventListener("click", () => {
+
+        currentDate.setMonth(
+            currentDate.getMonth() + 1
+        );
+
+        updateMonthDisplay();
+    });
+
+    // MONTH VIEW
+
+    document.getElementById("monthViewBtn")
+    ?.addEventListener("click", () => {
+
+        alert("Month View Activated");
+
+    });
+
+    // LIST VIEW
+
+    document.getElementById("listViewBtn")
+    ?.addEventListener("click", () => {
+
+        alert("List View Activated");
+
+    });
+
+    // IMPORT CSV
+
+    document.getElementById("importBtn")
+    ?.addEventListener("click", () => {
+
+        document
+            .getElementById("csvFile")
+            .click();
+
+    });
+
+    document.getElementById("csvFile")
+    ?.addEventListener("change", function (e) {
+
+        const file = e.target.files[0];
+
+        if (!file) return;
+
+        const reader = new FileReader();
+
+        reader.onload = function () {
+
+            alert(
+                "CSV Imported Successfully:\n" +
+                file.name
+            );
+
+            console.log(reader.result);
+        };
+
+        reader.readAsText(file);
+    });
+
+    // EXPORT CSV
+
+    document.getElementById("exportBtn")
+    ?.addEventListener("click", () => {
+
+        const csv =
+`Date,Instrument,Profit
+2023-10-02,Crude Oil,1240
+2023-10-04,EURUSD,-420
+2023-10-05,Gold,850`;
+
+        const blob =
+            new Blob([csv],
+                { type: "text/csv" });
+
+        const link =
+            document.createElement("a");
+
+        link.href =
+            URL.createObjectURL(blob);
+
+        link.download =
+            "trades.csv";
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        document.body.removeChild(link);
+    });
+
+    // LOG NEW TRADE
+
+    document.getElementById("logTradeBtn")
+    ?.addEventListener("click", () => {
+
+        const instrument =
+            document.querySelector("select")
+            ?.value || "Unknown";
+
+        const trade = {
+            instrument,
+            date: new Date().toLocaleString()
+        };
+
+        let trades =
+            JSON.parse(
+                localStorage.getItem("trades")
+            ) || [];
+
+        trades.push(trade);
+
+        localStorage.setItem(
+            "trades",
+            JSON.stringify(trades)
+        );
+
+        alert(
+            "Trade Logged Successfully\n\n" +
+            instrument
+        );
+    });
+
+    // CALENDAR DAY CLICK
+
+    document
+        .querySelectorAll(".calendar-day")
+        .forEach(day => {
+
+            day.addEventListener("click", () => {
+
+                const dayNumber =
+                    day.querySelector("span")
+                    ?.textContent || "";
+
+                alert(
+                    "Selected Day: " +
+                    dayNumber
+                );
             });
         });
 
-        // Simple tab/view switching mock
-        const navItems = document.querySelectorAll('aside nav a');
-        navItems.forEach(item => {
-            item.addEventListener('click', (e) => {
-                navItems.forEach(i => i.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'font-semibold'));
-                navItems.forEach(i => i.classList.add('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container-high'));
-                
-                item.classList.add('bg-secondary-container', 'text-on-secondary-container', 'font-semibold');
-                item.classList.remove('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-container-high');
+    // NAV ACTIVE STATE
+
+    const navItems =
+        document.querySelectorAll("aside nav a");
+
+    navItems.forEach(item => {
+
+        item.addEventListener("click", () => {
+
+            navItems.forEach(i => {
+
+                i.classList.remove(
+                    "bg-secondary-container",
+                    "text-on-secondary-container",
+                    "font-semibold"
+                );
+
             });
+
+            item.classList.add(
+                "bg-secondary-container",
+                "text-on-secondary-container",
+                "font-semibold"
+            );
         });
-    </script>
+    });
+
+});
+
+</script>
 </body>
 </html>
